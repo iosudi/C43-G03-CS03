@@ -31,44 +31,55 @@ class Program
 
         #region Question 3
 
-        int MAX_NUMBER = 0;
-        int MIN_NUMBER = 0;
+        // int MAX_NUMBER = 0;
+        // int MIN_NUMBER = 0;
+        //
+        // Console.WriteLine("Enter the first number: ");
+        // int firstNumber = int.Parse(Console.ReadLine());
+        //
+        // Console.WriteLine("Enter the second number: ");
+        // int secondNumber = int.Parse(Console.ReadLine());
+        //
+        // Console.WriteLine("Enter the third number: ");
+        // int thirdNumber = int.Parse(Console.ReadLine());
+        //
+        // // Check the Max number
+        // if (firstNumber > secondNumber && firstNumber > thirdNumber)
+        // {
+        //     MAX_NUMBER = firstNumber;
+        // } else if (secondNumber > firstNumber && secondNumber > thirdNumber)
+        // {
+        //     MAX_NUMBER = secondNumber;
+        // } else if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+        // {
+        //     MAX_NUMBER = thirdNumber;
+        // }
+        //
+        // // Check the Min number
+        // if (firstNumber < secondNumber && firstNumber < thirdNumber)
+        // {
+        //     MIN_NUMBER = firstNumber;
+        // }else if (secondNumber < firstNumber && secondNumber < thirdNumber)
+        // {
+        //     MIN_NUMBER = secondNumber;
+        // } else if (thirdNumber < firstNumber && thirdNumber < secondNumber)
+        // {
+        //     MIN_NUMBER = thirdNumber;
+        // }
+        //
+        // Console.WriteLine($"Max element is {MAX_NUMBER}");
+        // Console.WriteLine($"Min element is {MIN_NUMBER}");
+
+        #endregion
+
+        #region Question 4
+
+        Console.WriteLine("Enter a number: ");
+        int number = int.Parse(Console.ReadLine()!);
         
-        Console.WriteLine("Enter the first number: ");
-        int firstNumber = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Enter the second number: ");
-        int secondNumber = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Enter the third number: ");
-        int thirdNumber = int.Parse(Console.ReadLine());
-
-        // Check the Max number
-        if (firstNumber > secondNumber && firstNumber > thirdNumber)
-        {
-            MAX_NUMBER = firstNumber;
-        } else if (secondNumber > firstNumber && secondNumber > thirdNumber)
-        {
-            MAX_NUMBER = secondNumber;
-        } else if (thirdNumber > firstNumber && thirdNumber > secondNumber)
-        {
-            MAX_NUMBER = thirdNumber;
-        }
-
-        // Check the Min number
-        if (firstNumber < secondNumber && firstNumber < thirdNumber)
-        {
-            MIN_NUMBER = firstNumber;
-        }else if (secondNumber < firstNumber && secondNumber < thirdNumber)
-        {
-            MIN_NUMBER = secondNumber;
-        } else if (thirdNumber < firstNumber && thirdNumber < secondNumber)
-        {
-            MIN_NUMBER = thirdNumber;
-        }
-
-        Console.WriteLine($"Max element is {MAX_NUMBER}");
-        Console.WriteLine($"Min element is {MIN_NUMBER}");
+        // Check if the number even or odd
+        string message = number % 2 == 0 ? "Number is Even" : "Number is Odd";
+        Console.WriteLine(message);
 
         #endregion
     }
