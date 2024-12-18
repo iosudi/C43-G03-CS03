@@ -74,12 +74,30 @@ class Program
 
         #region Question 4
 
-        Console.WriteLine("Enter a number: ");
-        int number = int.Parse(Console.ReadLine()!);
+        // Console.WriteLine("Enter a number: ");
+        // int number = int.Parse(Console.ReadLine()!);
+        //
+        // // Check if the number even or odd
+        // string message = number % 2 == 0 ? "Number is Even" : "Number is Odd";
+        // Console.WriteLine(message);
+
+        #endregion
+
+        #region Question 5
+
+        char letter = char.Parse(Console.ReadLine());
         
-        // Check if the number even or odd
-        string message = number % 2 == 0 ? "Number is Even" : "Number is Odd";
-        Console.WriteLine(message);
+        // handle the case-sensitive
+        char lowercaseLetter = char.ToLower(letter);
+
+        if (lowercaseLetter == 'a'  || lowercaseLetter == 'e'  || lowercaseLetter == 'i' ||
+            lowercaseLetter == 'o'  || lowercaseLetter == 'u' )
+        {
+            Console.WriteLine("Vowel !");
+        }else
+        {
+            Console.WriteLine("Consonant !");   
+        }
 
         #endregion
     }
