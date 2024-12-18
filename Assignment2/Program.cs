@@ -85,20 +85,43 @@ class Program
 
         #region Question 5
 
-        char letter = char.Parse(Console.ReadLine());
+        // char letter = char.Parse(Console.ReadLine());
+        //
+        // // handle the case-sensitive
+        // char lowercaseLetter = char.ToLower(letter);
+        //
+        // if (lowercaseLetter == 'a'  || lowercaseLetter == 'e'  || lowercaseLetter == 'i' ||
+        //     lowercaseLetter == 'o'  || lowercaseLetter == 'u' )
+        // {
+        //     Console.WriteLine("Vowel !");
+        // }else
+        // {
+        //     Console.WriteLine("Consonant !");   
+        // }
+
+        #endregion
+
+        #region Question 6
+
+        int TOTAL = 0;
+        double AVG = 0;
+        double PERCENTAGE = 0;
+
+        Console.WriteLine("Enter Marks of five subjects: ");
+        int subj1 = int.Parse(Console.ReadLine());
+        int subj2 = int.Parse(Console.ReadLine());
+        int subj3 = int.Parse(Console.ReadLine());
+        int subj4 = int.Parse(Console.ReadLine());
+        int subj5 = int.Parse(Console.ReadLine());
+
+    
+        TOTAL = subj1 + subj2 + subj3 + subj4 + subj5;
+        AVG = TOTAL / 5;
+        PERCENTAGE = (TOTAL / 500.0) * 100;
         
-        // handle the case-sensitive
-        char lowercaseLetter = char.ToLower(letter);
-
-        if (lowercaseLetter == 'a'  || lowercaseLetter == 'e'  || lowercaseLetter == 'i' ||
-            lowercaseLetter == 'o'  || lowercaseLetter == 'u' )
-        {
-            Console.WriteLine("Vowel !");
-        }else
-        {
-            Console.WriteLine("Consonant !");   
-        }
-
+        Console.WriteLine($"Total Marks : {TOTAL}");
+        Console.WriteLine($"Average Marks : {AVG}");
+        Console.WriteLine($"Percent  : {PERCENTAGE}%");
         #endregion
     }
 }
