@@ -103,25 +103,44 @@ class Program
 
         #region Question 6
 
-        int TOTAL = 0;
-        double AVG = 0;
-        double PERCENTAGE = 0;
+        // int TOTAL = 0;
+        // double AVG = 0;
+        // double PERCENTAGE = 0;
+        //
+        // Console.WriteLine("Enter Marks of five subjects: ");
+        // int subj1 = int.Parse(Console.ReadLine());
+        // int subj2 = int.Parse(Console.ReadLine());
+        // int subj3 = int.Parse(Console.ReadLine());
+        // int subj4 = int.Parse(Console.ReadLine());
+        // int subj5 = int.Parse(Console.ReadLine());
+        //
+        //
+        // TOTAL = subj1 + subj2 + subj3 + subj4 + subj5;
+        // AVG = TOTAL / 5;
+        // PERCENTAGE = (TOTAL / 500.0) * 100;
+        //
+        // Console.WriteLine($"Total Marks : {TOTAL}");
+        // Console.WriteLine($"Average Marks : {AVG}");
+        // Console.WriteLine($"Percent  : {PERCENTAGE}%");
 
-        Console.WriteLine("Enter Marks of five subjects: ");
-        int subj1 = int.Parse(Console.ReadLine());
-        int subj2 = int.Parse(Console.ReadLine());
-        int subj3 = int.Parse(Console.ReadLine());
-        int subj4 = int.Parse(Console.ReadLine());
-        int subj5 = int.Parse(Console.ReadLine());
-
-    
-        TOTAL = subj1 + subj2 + subj3 + subj4 + subj5;
-        AVG = TOTAL / 5;
-        PERCENTAGE = (TOTAL / 500.0) * 100;
-        
-        Console.WriteLine($"Total Marks : {TOTAL}");
-        Console.WriteLine($"Average Marks : {AVG}");
-        Console.WriteLine($"Percent  : {PERCENTAGE}%");
         #endregion
+
+        #region Question 7
+
+        Console.WriteLine("Enter the number of month");
+        int month = Convert.ToInt32(Console.ReadLine());
+
+        if (month is 1 or 3 or 5 or 7 or 8 or 10 or 12)
+        {
+            Console.WriteLine($"Days in Month: 31");
+        }else if (month is 4 or 6 or 9 or 11)
+        {
+            Console.WriteLine($"Days in Month: 30");
+        } else if (month == 2)
+        {
+            Console.WriteLine($"Days in Month: 28");
+        }
+
+    #endregion
     }
 }
