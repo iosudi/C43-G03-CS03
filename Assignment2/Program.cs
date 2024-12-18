@@ -127,20 +127,67 @@ class Program
 
         #region Question 7
 
-        Console.WriteLine("Enter the number of month");
-        int month = Convert.ToInt32(Console.ReadLine());
+        // Console.WriteLine("Enter the number of month");
+        // int month = Convert.ToInt32(Console.ReadLine());
+        //
+        // if (month is 1 or 3 or 5 or 7 or 8 or 10 or 12)
+        // {
+        //     Console.WriteLine($"Days in Month: 31");
+        // }else if (month is 4 or 6 or 9 or 11)
+        // {
+        //     Console.WriteLine($"Days in Month: 30");
+        // } else if (month == 2)
+        // {
+        //     Console.WriteLine($"Days in Month: 28");
+        // }
 
-        if (month is 1 or 3 or 5 or 7 or 8 or 10 or 12)
+        #endregion
+
+        #region Question 8
+
+        Console.WriteLine("Simple Calculator :)");
+        Console.WriteLine("Enter number:");
+        double number1 = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter operation: (+ - * /)");
+        char operation = char.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter number:");
+        double number2 = double.Parse(Console.ReadLine());
+
+        // User can not do divide operation on zero
+        if (operation == '/' && number2 == 0)
         {
-            Console.WriteLine($"Days in Month: 31");
-        }else if (month is 4 or 6 or 9 or 11)
+            Console.WriteLine("You can not divide by 0");
+            Console.WriteLine("Application will terminate.");
+            return;
+        }
+        
+        double result = 0;
+
+        // Switch case to handle the operations
+        switch (operation)
         {
-            Console.WriteLine($"Days in Month: 30");
-        } else if (month == 2)
-        {
-            Console.WriteLine($"Days in Month: 28");
+            case '+' :
+                result = number1 + number2;
+                break;
+            case '-':
+                result = number1 - number2;
+                break;
+            case '*':
+                result = number1 * number2;
+                break;
+            case '/':
+                result = number1 / number2;
+                break;
+            default:
+                Console.WriteLine("Wrong Operation");
+                Console.WriteLine("Application will now exit.");
+                break;
         }
 
-    #endregion
+        Console.WriteLine($"Your result from the {operation} operation is: {result}");
+
+        #endregion
     }
 }
