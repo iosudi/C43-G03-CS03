@@ -145,48 +145,75 @@ class Program
 
         #region Question 8
 
-        Console.WriteLine("Simple Calculator :)");
-        Console.WriteLine("Enter number:");
-        double number1 = double.Parse(Console.ReadLine());
+        // Console.WriteLine("Simple Calculator :)");
+        // Console.WriteLine("Enter number:");
+        // double number1 = double.Parse(Console.ReadLine());
+        //
+        // Console.WriteLine("Enter operation: (+ - * /)");
+        // char operation = char.Parse(Console.ReadLine());
+        //
+        // Console.WriteLine("Enter number:");
+        // double number2 = double.Parse(Console.ReadLine());
+        //
+        // // User can not do divide operation on zero
+        // if (operation == '/' && number2 == 0)
+        // {
+        //     Console.WriteLine("You can not divide by 0");
+        //     Console.WriteLine("Application will terminate.");
+        //     return;
+        // }
+        //
+        // double result = 0;
+        //
+        // // Switch case to handle the operations
+        // switch (operation)
+        // {
+        //     case '+' :
+        //         result = number1 + number2;
+        //         break;
+        //     case '-':
+        //         result = number1 - number2;
+        //         break;
+        //     case '*':
+        //         result = number1 * number2;
+        //         break;
+        //     case '/':
+        //         result = number1 / number2;
+        //         break;
+        //     default:
+        //         Console.WriteLine("Wrong Operation");
+        //         Console.WriteLine("Application will now exit.");
+        //         break;
+        // }
+        //
+        // Console.WriteLine($"Your result from the {operation} operation is: {result}");
 
-        Console.WriteLine("Enter operation: (+ - * /)");
-        char operation = char.Parse(Console.ReadLine());
+        #endregion
 
-        Console.WriteLine("Enter number:");
-        double number2 = double.Parse(Console.ReadLine());
+        #region Question 9
 
-        // User can not do divide operation on zero
-        if (operation == '/' && number2 == 0)
-        {
-            Console.WriteLine("You can not divide by 0");
-            Console.WriteLine("Application will terminate.");
-            return;
-        }
+        Console.WriteLine("Enter the coordinates of the first point (x1, y1):");
+        double x1 = double.Parse(Console.ReadLine());
+        double y1 = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the coordinates of the second point (x2, y2):");
+        double x2 = double.Parse(Console.ReadLine());
+        double y2 = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the coordinates of the third point (x3, y3):");
+        double x3 = double.Parse(Console.ReadLine());
+        double y3 = double.Parse(Console.ReadLine());
         
-        double result = 0;
+        bool isOnTheSameLine = (y1 - y2) * (x1 - x3) == (y1 - y3) * (x1 - x2);
 
-        // Switch case to handle the operations
-        switch (operation)
+        if (isOnTheSameLine)
         {
-            case '+' :
-                result = number1 + number2;
-                break;
-            case '-':
-                result = number1 - number2;
-                break;
-            case '*':
-                result = number1 * number2;
-                break;
-            case '/':
-                result = number1 / number2;
-                break;
-            default:
-                Console.WriteLine("Wrong Operation");
-                Console.WriteLine("Application will now exit.");
-                break;
+            Console.WriteLine("points lie on a single straight line.");
         }
-
-        Console.WriteLine($"Your result from the {operation} operation is: {result}");
+        else
+        {
+            Console.WriteLine(" points doesn't lie on a single straight line.");
+        }
 
         #endregion
     }
