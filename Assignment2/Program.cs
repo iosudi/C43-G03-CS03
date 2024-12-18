@@ -192,27 +192,50 @@ class Program
 
         #region Question 9
 
-        Console.WriteLine("Enter the coordinates of the first point (x1, y1):");
-        double x1 = double.Parse(Console.ReadLine());
-        double y1 = double.Parse(Console.ReadLine());
+        // Console.WriteLine("Enter the coordinates of the first point (x1, y1):");
+        // double x1 = double.Parse(Console.ReadLine());
+        // double y1 = double.Parse(Console.ReadLine());
+        //
+        // Console.WriteLine("Enter the coordinates of the second point (x2, y2):");
+        // double x2 = double.Parse(Console.ReadLine());
+        // double y2 = double.Parse(Console.ReadLine());
+        //
+        // Console.WriteLine("Enter the coordinates of the third point (x3, y3):");
+        // double x3 = double.Parse(Console.ReadLine());
+        // double y3 = double.Parse(Console.ReadLine());
+        //
+        // bool isOnTheSameLine = (y1 - y2) * (x1 - x3) == (y1 - y3) * (x1 - x2);
+        //
+        // if (isOnTheSameLine)
+        // {
+        //     Console.WriteLine("points lie on a single straight line.");
+        // }
+        // else
+        // {
+        //     Console.WriteLine(" points doesn't lie on a single straight line.");
+        // }
 
-        Console.WriteLine("Enter the coordinates of the second point (x2, y2):");
-        double x2 = double.Parse(Console.ReadLine());
-        double y2 = double.Parse(Console.ReadLine());
+        #endregion
 
-        Console.WriteLine("Enter the coordinates of the third point (x3, y3):");
-        double x3 = double.Parse(Console.ReadLine());
-        double y3 = double.Parse(Console.ReadLine());
-        
-        bool isOnTheSameLine = (y1 - y2) * (x1 - x3) == (y1 - y3) * (x1 - x2);
+        #region Question 10
 
-        if (isOnTheSameLine)
+        Console.WriteLine("Enter task time :");
+        double taskTime = double.Parse(Console.ReadLine());
+
+        switch (taskTime)
         {
-            Console.WriteLine("points lie on a single straight line.");
-        }
-        else
-        {
-            Console.WriteLine(" points doesn't lie on a single straight line.");
+            case >= 2 and <= 3:
+                Console.WriteLine("Worker completed his task with highly efficiency level.");
+                break;
+            case > 3 and <= 4:
+                Console.WriteLine("Worker needs to increase their speed.");
+                break;
+            case > 4 and <= 5:
+                Console.WriteLine("Worker needs a training to enhance their speed.");
+                break;
+            case > 5:
+                Console.WriteLine("Worker Should leave the company.");
+                break;
         }
 
         #endregion
